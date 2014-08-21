@@ -18,11 +18,6 @@
 
     // Init
     init: function() {
-      this.getElements();
-    },
-
-    // Get elements
-    getElements: function() {
       var self = this;
 
       $(window).scroll(function() {
