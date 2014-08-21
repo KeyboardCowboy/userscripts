@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Mint Sticky Budget Summary
 // @namespace  http://mint.com/
-// @version    0.1
+// @version    1.0.1
 // @description  Keep the budget summary box on-screen in the right column.
 // @match      https://wwws.mint.com/planning.event
 // @require    https://code.jquery.com/jquery-2.1.1.min.js
