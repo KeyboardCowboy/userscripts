@@ -35,8 +35,20 @@
         'line-height': '1.5rem'
       });
 
+      // Hide the first instance of the sidebar until 1603 is released.
+      var $sb1 = $(".leaf__top-right");
+      var $sb2 = $(".leaf__lower-right");
+      $(window).on('scroll', function() {
+        if ($sb2.is(':visible')) {
+          $sb1.addClass('js-hide');
+        }
+        else {
+          $sb1.removeClass('js-hide');
+        }
+      });
+
       // Reset the sticky sidebar.
-      if (Drupal.behaviors.leafStickyComponents !== 'undefined') {
+      if (Drupal !== 'undefined') {
         Drupal.behaviors.leafStickyComponents.attach();
       }
       else {
