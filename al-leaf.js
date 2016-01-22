@@ -1,4 +1,4 @@
-(function($) {
+(function($, Drupal) {
   $(document).ready(function() {
     var $joinPanes = $('.leaf-join');
 
@@ -31,4 +31,4 @@
       Drupal.behaviors.leafStickyComponents.attach();
     }
   });
-})(jQuery);
+})(jQuery, Drupal);
