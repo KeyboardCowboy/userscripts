@@ -1,4 +1,4 @@
-(function($, Drupal) {
+(function($) {
   $(document).ready(function() {
     var $joinPanes = $('.leaf-join');
 
@@ -45,4 +45,4 @@
       }
     }
   });
-})(jQuery, Drupal);
+})(jQuery);
