@@ -2,20 +2,22 @@
  * - Make the header stick to the top.
  * - Make the sidebar stick to the side and scroll independently.
  */
-.col-md-4.col-lg-3 {
-  position: fixed;
-  overflow: scroll;
-  max-height: calc(100% - 60px);
-  top: 60px;
-}
+@media screen and (min-width: 1200px) {
+  .col-md-4.col-lg-3 {
+    position: fixed;
+    overflow: scroll;
+    max-height: calc(100% - 60px);
+    top: 60px;
+  }
 
-.col-md-8.col-lg-9 {
-  margin-left: 25%;
-  margin-top: 60px;
-}
+  .col-md-8.col-lg-9 {
+    margin-left: 25%;
+    margin-top: 60px;
+  }
 
-.navbar.navbar-default {
-  position: fixed;
-  z-index: 999;
-  width: 100%;
+  .navbar.navbar-default {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+  }
 }
