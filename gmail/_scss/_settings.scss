@@ -9,27 +9,32 @@
     flex: 1;
     text-align: center;
     background: transparent;
+    transition: .2s all ease-out;
 
     a.f0 {
       padding: 1em;
       color: white;
       display: inline-block;
-
-      &:hover,
-      &:focus {
-        background-color: #e5e5e5;
-      }
     }
   }
 
   // Inactive tabs.
   .f1 {
     border-bottom: 1px solid #ccc;
+
+    &:hover, &:focus {
+      background-color: #e5e5e5;
+    }
   }
 
   // Active tab.
   .fZ {
     border-radius: .5em .5em 0 0;
+    background-color: #e5e5e5;
+
+    a.f0 {
+      color: black;
+    }
   }
 
   // Empty div.  Why?
