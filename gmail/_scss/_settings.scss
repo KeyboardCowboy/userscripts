@@ -1,0 +1,39 @@
+// Tab bar.
+.nH.fY {
+  display: flex;
+  align-items: stretch;
+  background: transparent;
+
+  // All tabs.
+  > div {
+    flex: 1;
+    text-align: center;
+    background: transparent;
+
+    a {
+      padding: 1em;
+      color: white;
+      display: inline-block;
+
+      &:hover,
+      &:focus {
+        background-color: #e5e5e5;
+      }
+    }
+  }
+
+  // Inactive tabs.
+  .f1 {
+    border-bottom: 1px solid #ccc;
+  }
+
+  // Active tab.
+  .fZ {
+    border-radius: .5em .5em 0 0;
+  }
+
+  // Empty div.  Why?
+  .dJ {
+    display: none;
+  }
+}
