@@ -1,0 +1,10 @@
+main * {
+    color: transparent !important;
+    text-shadow: 0 0 15px rgba(0,0,0,0.5) !important;
+}
+
+main *:hover,
+main article *:focus {
+    color: #000 !important;
+    text-shadow: none !important;
+}
