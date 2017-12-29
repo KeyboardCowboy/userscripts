@@ -1,10 +1,33 @@
-main * {
+html.desensitize main * {
     color: transparent !important;
     text-shadow: 0 0 15px rgba(0,0,0,0.5) !important;
 }
 
-main *:hover,
-main article *:focus {
+html.desensitize main *:hover,
+html.desensitize main article *:focus {
     color: #000 !important;
     text-shadow: none !important;
+}
+
+/* Theme the toggle box */
+#js-kitten-toggle {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 .5em 0 0;
+    background: rgba(0,0,0, .5);
+    transition: 0.2s all;
+    padding: .5em;
+}
+
+#js-kitten-toggle:hover,
+#js-kitten-toggle:focus {
+    background: rgba(0,0,0, .9);
+}
+
+#js-kitten-toggle label {
+    color: #fff;
+    font-size: 12pt;
+    margin-left: .5em;
+    line-height: 0;
 }
