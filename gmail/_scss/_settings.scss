@@ -12,6 +12,11 @@
     transition: .1s all ease-out;
     border-radius: .5em .5em 0 0;
 
+    // Center the links within the tabs.
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     a.f0 {
       padding: 1em;
       color: white;
@@ -21,12 +26,19 @@
 
   // Inactive tabs.
   .f1 {
-    border-bottom: 1px solid #ccc;
+    border: 1px solid white;
+    border-radius: .5em .5em 0 0;
+    background: rgba($background-color,.2);
 
     &:hover, &:focus {
-      background-color: $background-color;
-      color: black;
+      background: rgba($background-color,.6);
       border-bottom: 1px solid $background-color;
+    }
+
+    a {
+      &:hover, &:focus {
+        color: black;
+      }
     }
   }
 
