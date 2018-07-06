@@ -1,0 +1,20 @@
+.hp-toc-entries {
+    display: block !important;
+    transform: translate3d(10px, 0px, 0px) !important;
+    opacity: 1 !important;
+}
+
+.hp-toc {
+   overflow: visible !important;
+   overflow-y: scroll !important;
+   width: 300px !important;
+  transition: 0.2s all ease-in-out;
+}
+
+.hp-toc .hp-toc-entry-current .hp-toc-entry-link {
+  border: 1px solid #eee;
+  box-shadow: 0px 0 2px 2px;
+  background: linear-gradient(transparent 0, #eee 100%);
+  padding: .25em;
+  border-radius: 10px 50px 50px 10px;
+}
