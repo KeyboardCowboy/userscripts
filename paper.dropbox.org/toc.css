@@ -18,3 +18,24 @@
   padding: .25em;
   border-radius: 10px 50px 50px 10px;
 }
+
+.hp-toc ul.hp-toc-entries {
+  padding-left: 0;
+}
+
+li.hp-toc-entry-level0 .dmc-button.hp-toc-entry-link.hpx-button.dmc-button-link {
+  padding-left: 20px;
+}
+
+li.hp-toc-entry-level1 .dmc-button.hp-toc-entry-link.hpx-button.dmc-button-link {
+  padding-left: 30px;
+}
+
+li.hp-toc-entry-level2 .dmc-button.hp-toc-entry-link.hpx-button.dmc-button-link {
+  padding-left: 40px;
+}
+
+li.hp-toc-entry-level3 .dmc-button.hp-toc-entry-link.hpx-button.dmc-button-link {
+  padding-left: 50px;
+}
+
