@@ -30,6 +30,7 @@
 .v .nH.fY > div a.f0 {
   padding: 1em;
   color: white;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
   display: inline-block;
   line-height: 1.3em;
 }
