@@ -11,6 +11,7 @@
     background: transparent;
     transition: .1s all ease-out;
     border-radius: .5em .5em 0 0;
+    box-shadow: none;
 
     // Center the links within the tabs.
     display: flex;
@@ -43,7 +44,7 @@
 
   // Active tab.
   .fZ {
-    background-color: $background-color;
+    background-color: rgba($background-color, .95);
 
     a.f0 {
       color: black;
