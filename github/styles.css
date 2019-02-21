@@ -1,4 +1,4 @@
-body {
+\*body {
   margin-top: 50px !important;
 }
 
@@ -25,7 +25,7 @@ body {
   opacity: .9;
   width: 38vw !important;
 }
-
+*/
 
 /* Add a shadow behind user added images in comments and descriptions.*/
 img[src^="https://user-images"],
