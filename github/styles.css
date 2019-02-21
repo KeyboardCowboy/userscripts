@@ -1,0 +1,33 @@
+body {
+  margin-top: 50px !important;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+}
+
+.repository-sidebar,
+.discussion-sidebar {
+  top: 60px !important;  
+}
+
+#jk-hierarchy {
+  border-left: 1px solid #ddd;
+  opacity: .3;
+  transition: .2s all ease-out;
+  width: 5vw !important;
+}
+
+#jk-hierarchy:hover {
+  opacity: .9;
+  width: 38vw !important;
+}
+
+
+/* Add a shadow behind user added images in comments and descriptions.*/
+img[src^="https://user-images"] {
+ box-shadow: 0 0 15px 3px rgba(0,0,0, .2); 
+}
