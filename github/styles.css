@@ -28,6 +28,8 @@ body {
 
 
 /* Add a shadow behind user added images in comments and descriptions.*/
-img[src^="https://user-images"] {
+img[src^="https://user-images"],
+img[src^="https://media.github."] {
  box-shadow: 0 0 15px 3px rgba(0,0,0, .2); 
 }
+
