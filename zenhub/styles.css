@@ -1,0 +1,10 @@
+/* Darken the pipeline backgrounds for greater contrast against cards. */
+.zhc-board .zhc-pipeline,
+.zhc-board .zhc-pipeline-header {
+  background-color: #dddddd;
+}
+
+/* Allow transparent images to have transparent backgrounds. */
+.zhc-markdown img {
+  background-color: transparent !important; 
+}
