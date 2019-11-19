@@ -1,6 +1,22 @@
 (function ($) {
   // Budget tracking object.
   var BudgetTrack = {
+    waitForBudgetTable: function() {
+      var observer = new MutationObserver(function(mutations) {
+        if ($(".budget-table .is-sub-category").length) {
+          console.log("Categories loaded.  Calculating usage percentages.");
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: false,
+        characterData: false
+      });
+    },
+
     /**
      * Get the percentage of dollars spent for a sub category.
      *
@@ -116,6 +132,8 @@
 
   // Add the tracking to the DOM.
   $(document).ready(function() {
+    BudgetTrack.waitForBudgetTable();
+
     var $cells = $('.budget-table-row.is-sub-category li.budget-table-cell-activity');
 
     // Set the date marker.
