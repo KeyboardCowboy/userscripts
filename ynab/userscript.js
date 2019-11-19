@@ -48,9 +48,6 @@
      */
     setDateMarker: function () {
       var date_str = this.getDateFromURL();
-
-      console.log(date_str);
-
       var y = date_str.substr(0, 4);
       var m = date_str.substr(4, 2);
 
