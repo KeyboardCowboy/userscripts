@@ -1,13 +1,16 @@
 (function ($) {
-  console.log("YNAB Budget Usage Tracker v1.0.3");
+  console.log("YNAB Budget Usage Tracker v1.0.5");
 
   // Budget tracking object.
   var BudgetTrack = {
-    waitForBudgetTable: function() {
+    init: function() {
+      var _this = this;
+
       var observer = new MutationObserver(function(mutations) {
         if ($(".budget-table .is-sub-category").length) {
           console.log("Categories loaded.  Calculating usage percentages.");
           observer.disconnect();
+          _this.run();
         }
       });
 
@@ -16,6 +19,28 @@
         subtree: true,
         attributes: false,
         characterData: false
+      });
+    },
+
+    /**
+     * Run the script.
+     */
+    run: function () {
+      var _this = this;
+      var $cells = $('.budget-table-row.is-sub-category li.budget-table-cell-activity');
+
+      // Set the date marker.
+      this.setDateMarker();
+
+      // Set the background on each cell as a percentage of the amount spent vs budgeted.
+      $cells.each(function() {
+        var $cell = $(this);
+
+        // Only add indicators to active budget items for the month.
+        if (_this.catIsActive($cell)) {
+          // Set each row's activity percentage indicator.
+          _this.setActivityIndicator($cell);
+        }
       });
     },
 
@@ -134,22 +159,6 @@
 
   // Add the tracking to the DOM.
   $(document).ready(function() {
-    BudgetTrack.waitForBudgetTable();
-
-    var $cells = $('.budget-table-row.is-sub-category li.budget-table-cell-activity');
-
-    // Set the date marker.
-    BudgetTrack.setDateMarker();
-
-    // Set the background on each cell as a percentage of the amount spent vs budgeted.
-    $cells.each(function() {
-      var $cell = $(this);
-
-      // Only add indicators to active budget items for the month.
-      if (BudgetTrack.catIsActive($cell)) {
-        // Set each row's activity percentage indicator.
-        BudgetTrack.setActivityIndicator($cell);
-      }
-    });
+    BudgetTrack.init();
   });
 })(jQuery);
