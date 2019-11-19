@@ -4,19 +4,19 @@
   // Budget tracking object.
   var BudgetTrack = {
     waitForBudgetTable: function() {
-      // var observer = new MutationObserver(function(mutations) {
-      //   if ($(".budget-table .is-sub-category").length) {
-      //     console.log("Categories loaded.  Calculating usage percentages.");
-      //     observer.disconnect();
-      //   }
-      // });
-      //
-      // observer.observe(document.body, {
-      //   childList: true,
-      //   subtree: true,
-      //   attributes: false,
-      //   characterData: false
-      // });
+      var observer = new MutationObserver(function(mutations) {
+        if ($(".budget-table .is-sub-category").length) {
+          console.log("Categories loaded.  Calculating usage percentages.");
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: false,
+        characterData: false
+      });
     },
 
     /**
