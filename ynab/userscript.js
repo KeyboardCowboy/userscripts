@@ -1,5 +1,5 @@
 (function ($) {
-  console.log("YNAB Budget Usage Tracker v1.0.2");
+  console.log("YNAB Budget Usage Tracker v1.0.3");
 
   // Budget tracking object.
   var BudgetTrack = {
