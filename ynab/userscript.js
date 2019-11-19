@@ -132,6 +132,8 @@
 
   // Add the tracking to the DOM.
   $(document).ready(function() {
+    console.log("YNAB Budget Usage Tracker v1.0.1");
+
     BudgetTrack.waitForBudgetTable();
 
     var $cells = $('.budget-table-row.is-sub-category li.budget-table-cell-activity');
