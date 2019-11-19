@@ -12,7 +12,7 @@
       var avail = this.getAvailable($activity_cell);
       var total = activity + avail;
       var pct_spent = ((activity / total) * 1000) / 1000 || 0;
-      var pct_spent = Math.round((Math.min(pct_spent, 1)) * 100);
+      pct_spent = Math.round((Math.min(pct_spent, 1)) * 100);
 
       return pct_spent;
     },
@@ -47,8 +47,10 @@
      * Set the marker for the point in the month we are today.
      */
     setDateMarker: function () {
-      // Add the month completion marker.
-      var date_str = '201911';
+      var date_str = this.getDateFromURL();
+
+      console.log(date_str);
+
       var y = date_str.substr(0, 4);
       var m = date_str.substr(4, 2);
 
@@ -67,6 +69,27 @@
       // Add the stylesheet to the DOM.
       $style = $('<style />', {'type': 'text/css'}).append('.budget-table-row.is-sub-category li.budget-table-cell-activity:after {left: ' + pct_complete + '%; border-color: #999 !important;}');
       $(document).find('head').append($style);
+    },
+
+    /**
+     * Get the date string from the URL.
+     *
+     * @returns {string|number}
+     */
+    getDateFromURL: function() {
+      // If we're on the live app, use the actual URL.
+      if (window.location.hostname === 'app.youneedabudget.com') {
+        // Get the date string from the URL.
+        var parts = window.location.href.split('/');
+
+        // Handle potential trailing slash.
+        return parts.pop() || parts.pop();
+      }
+      // If we're on a dev server, use today's date.
+      else {
+        var date = new Date();
+        return date.getFullYear().toString() + (date.getMonth() + 1).toString();
+      }
     },
 
     /**
