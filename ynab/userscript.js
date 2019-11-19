@@ -1,20 +1,22 @@
 (function ($) {
+  console.log("YNAB Budget Usage Tracker v1.0.2");
+
   // Budget tracking object.
   var BudgetTrack = {
     waitForBudgetTable: function() {
-      var observer = new MutationObserver(function(mutations) {
-        if ($(".budget-table .is-sub-category").length) {
-          console.log("Categories loaded.  Calculating usage percentages.");
-          observer.disconnect();
-        }
-      });
-
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-        attributes: false,
-        characterData: false
-      });
+      // var observer = new MutationObserver(function(mutations) {
+      //   if ($(".budget-table .is-sub-category").length) {
+      //     console.log("Categories loaded.  Calculating usage percentages.");
+      //     observer.disconnect();
+      //   }
+      // });
+      //
+      // observer.observe(document.body, {
+      //   childList: true,
+      //   subtree: true,
+      //   attributes: false,
+      //   characterData: false
+      // });
     },
 
     /**
@@ -132,8 +134,6 @@
 
   // Add the tracking to the DOM.
   $(document).ready(function() {
-    console.log("YNAB Budget Usage Tracker v1.0.1");
-
     BudgetTrack.waitForBudgetTable();
 
     var $cells = $('.budget-table-row.is-sub-category li.budget-table-cell-activity');
