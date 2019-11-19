@@ -1,0 +1,26 @@
+$color-divider: rgba(0,0,0,.15);
+
+.budget-table-row {
+  &.is-sub-category {
+    /* Set the activity percentage. */
+    li.budget-table-cell-activity {
+      border-right: 1px solid $color-divider;
+      border-left: 1px solid $color-divider;
+      padding-right: 5px;
+      position: relative;
+      box-shadow: inset 2px 2px 2px $color-divider;
+
+      /* Set the month progression marker. */
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 100%;
+        border-right: 1px dashed transparent;
+      }
+    }
+  }
+}
+
+/* #f5dd80 - Caution */
