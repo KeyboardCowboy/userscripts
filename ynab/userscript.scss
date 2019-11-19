@@ -8,7 +8,8 @@ $color-divider: rgba(0,0,0,.15);
       border-left: 1px solid $color-divider;
       padding-right: 5px;
       position: relative;
-      box-shadow: inset 2px 2px 2px $color-divider;
+      //box-shadow: inset 2px 2px 2px $color-divider;
+      border: 1px solid var(--accent400);
 
       /* Set the month progression marker. */
       &:after {

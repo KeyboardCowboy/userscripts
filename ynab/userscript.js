@@ -39,7 +39,7 @@
       var pct_spent = this.getPctSpent($activity_cell);
 
       $activity_cell.css({
-        background: "linear-gradient(to right, #c4ecbb " + pct_spent + "%, transparent " + pct_spent + "%)"
+        background: "linear-gradient(to right, var(--accent200) " + pct_spent + "%, transparent " + pct_spent + "%)"
       });
     },
 
@@ -67,18 +67,6 @@
       // Add the stylesheet to the DOM.
       $style = $('<style />', {'type': 'text/css'}).append('.budget-table-row.is-sub-category li.budget-table-cell-activity:after {left: ' + pct_complete + '%; border-color: #999 !important;}');
       $(document).find('head').append($style);
-    },
-
-    /**
-     * Get the total budgeted amount as a float.
-     *
-     * @param $activity_cell
-     * @returns {number}
-     */
-    getBudgeted: function ($activity_cell) {
-      var string = $activity_cell.prev('.budget-table-cell-budgeted').find('span.user-data').text();
-      string = string.replace(/[\D$]/g,'');
-      return parseFloat(string) / 100 || 0;
     },
 
     /**

@@ -5,7 +5,7 @@
     border-left: 1px solid rgba(0, 0, 0, 0.15);
     padding-right: 5px;
     position: relative;
-    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--accent400);
     /* Set the month progression marker. */ }
     .budget-table-row.is-sub-category li.budget-table-cell-activity:after {
       content: '';
