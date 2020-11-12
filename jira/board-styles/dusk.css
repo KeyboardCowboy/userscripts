@@ -1,0 +1,85 @@
+.ghx-issue-compact .ghx-grabber {
+    width: 6px;
+}
+
+/* Enhanced Card Styling */
+.ghx-work .ghx-issue {
+    padding: 0;
+}
+.ghx-issue .ghx-issue-fields .ghx-key {
+    background-color: #444;
+    display: block;
+    padding: .25em 1em .25em 60px;
+    border-radius: .25em;
+}
+.ghx-issue-fields .ghx-key a:link,
+.ghx-issue-fields .ghx-key a:visited {
+  color: white;  
+}
+
+.ghx-column .ghx-issue.ghx-has-avatar .ghx-issue-fields,
+.ghx-column .ghx-issue.ghx-has-corner .ghx-issue-fields {
+    padding-right: 0;
+}
+    
+.ghx-issue .ghx-issue-fields .ghx-summary {
+  margin-right: 0;
+  padding: .5em 1em;
+  background-color: #eee;
+  padding-right: 50px;
+  font-weight: bold;
+}
+
+.ghx-issue-fields .ghx-summary .ghx-inner {
+    line-height: 1.3em;
+    max-height: 3.9em;
+}
+
+.ghx-issue.ghx-has-avatar .ghx-avatar {
+    border: 2px solid #444;
+    border-radius: 100px;
+    background-color: #fff;
+}
+
+.ghx-column .ghx-issue .ghx-highlighted-fields {
+    margin-top: 0;
+}
+
+.ghx-issue .ghx-highlighted-fields .ghx-highlighted-field .aui-label {
+    padding: .25em 1em;
+    border-radius: 0 0 .5em 0;
+    font-size: 12px;
+}
+
+.ghx-issue .ghx-extra-fields {
+  padding: .5em 1em;
+  font-size: 0.85em;
+}
+
+.ghx-issue .ghx-extra-fields .ghx-extra-field-row:not(:last-child) {
+    border-bottom: 1px solid #b4cad8;
+}
+
+.ghx-issue .ghx-extra-fields .ghx-extra-field-row {
+    padding: .25em;
+}
+
+.ghx-issue .ghx-card-footer {
+    padding: 0 1em 1em 1em;
+}
+
+.ghx-issue .ghx-card-footer .ghx-type {
+  position: absolute;
+    top: 5px;
+    left: 36px;
+}
+
+.ghx-issue .ghx-card-footer .ghx-flags {
+  position: absolute;
+    top: 5px;
+    left: 12px;
+}
+
+.ghx-issue .ghx-grabber {
+  width: 5px;    
+}
