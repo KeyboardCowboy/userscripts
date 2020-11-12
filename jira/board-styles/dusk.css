@@ -14,14 +14,14 @@
 }
 .ghx-issue-fields .ghx-key a:link,
 .ghx-issue-fields .ghx-key a:visited {
-  color: white;  
+  color: white;
 }
 
 .ghx-column .ghx-issue.ghx-has-avatar .ghx-issue-fields,
 .ghx-column .ghx-issue.ghx-has-corner .ghx-issue-fields {
     padding-right: 0;
 }
-    
+
 .ghx-issue .ghx-issue-fields .ghx-summary {
   margin-right: 0;
   padding: .5em 1em;
@@ -77,9 +77,9 @@
 .ghx-issue .ghx-card-footer .ghx-flags {
   position: absolute;
     top: 5px;
-    left: 12px;
+    left: 1em;
 }
 
 .ghx-issue .ghx-grabber {
-  width: 5px;    
+  width: 5px;
 }
