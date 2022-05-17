@@ -64,6 +64,10 @@
     padding: .25em;
 }
 
+.ghx-issue .ghx-extra-fields .ghx-extra-field-content > * {
+    vertical-align: middle;
+}
+
 .ghx-issue .ghx-card-footer {
     padding: 0 1em 1em 1em;
 }
