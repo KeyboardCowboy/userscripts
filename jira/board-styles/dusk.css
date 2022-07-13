@@ -15,7 +15,7 @@
 .ghx-issue .ghx-issue-fields .ghx-key {
     background-color: #444;
     display: block;
-    padding: .25em 1em .25em 50px;
+    padding: .25em 1em .25em 55px;
     border-radius: .25em;
 }
 .ghx-issue-fields .ghx-key a:link,
@@ -30,7 +30,7 @@
 
 .ghx-issue .ghx-issue-fields .ghx-summary {
   margin-right: 0;
-  padding: .5em .5em;
+  padding: .5em .5em .5em 10px;
   background-color: #eee;
   padding-right: 50px;
   font-weight: bold;
@@ -58,7 +58,7 @@
 }
 
 .ghx-issue .ghx-extra-fields {
-  padding: .5em;
+  padding: .5em .5em .5em 10px;
   font-size: 0.85em;
 }
 
@@ -81,13 +81,13 @@
 .ghx-issue .ghx-card-footer .ghx-type {
   position: absolute;
     top: 5px;
-    left: 28px;
+    left: 33px;
 }
 
 .ghx-issue .ghx-card-footer .ghx-flags {
   position: absolute;
     top: 5px;
-    left: 7px;
+    left: 12px;
 }
 
 .ghx-issue .ghx-card-footer div:not(:last-child) {
