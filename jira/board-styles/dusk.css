@@ -1,7 +1,7 @@
 /**
  * Author: KeyboardCowboy
  * Title: Jira Board Theme - Dusk
- * Updated: 13-jul-2022
+ * Updated: 15-jul-2022
  */
 
 .ghx-issue-compact .ghx-grabber {
@@ -32,19 +32,31 @@
   margin-right: 0;
   padding: .5em .5em .5em 10px;
   background-color: #eee;
-  padding-right: 50px;
+  /*padding-right: 50px;*/
   font-weight: bold;
 }
 
-.ghx-issue-fields .ghx-summary .ghx-inner {
+.ghx-band-1 .ghx-issue-fields .ghx-summary .ghx-inner {
     line-height: 1.3em;
     max-height: 3.9em;
 }
 
 .ghx-issue.ghx-has-avatar .ghx-avatar {
     border: 2px solid #444;
-    border-radius: 100px;
+    border-radius: 0;
     background-color: #fff;
+}
+
+.ghx-band-1 .ghx-issue .ghx-avatar {
+	position: absolute;
+	top: 0;
+    right: 0;
+}
+
+.ghx-band-1 .ghx-issue .ghx-avatar-img {
+	width: 22px;
+	height: 22px;
+	border-radius: 0;
 }
 
 .ghx-column .ghx-issue .ghx-highlighted-fields {
