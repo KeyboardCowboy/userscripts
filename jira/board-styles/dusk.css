@@ -1,122 +1,156 @@
-/**
- * Author: KeyboardCowboy
- * Title: Jira Board Theme - Dusk
- * Updated: 15-jul-2022
- */
+/* ==UserStyle==
+@name         Jira - Dusk Theme
+@version      20220818.16.52
+@namespace    userstyles.world/user/keyboardcowboy
+@description  Restyling of the cards on a jira board.
+@author       keyboardcowboy
+@license      No License
+==/UserStyle== */
 
-.ghx-issue-compact .ghx-grabber {
-    width: 6px;
-}
+@-moz-document url-prefix("https://jsw.") {
+    /**
+     * Author: KeyboardCowboy
+     * Title: Jira Board Theme - Dusk
+     * Updated: 18-jul-2022
+     */
 
-/* Enhanced Card Styling */
-.ghx-work .ghx-issue {
-    padding: 0;
-}
-.ghx-issue .ghx-issue-fields .ghx-key {
-    background-color: #444;
-    display: block;
-    padding: .25em 1em .25em 55px;
-    border-radius: .25em;
-}
-.ghx-issue-fields .ghx-key a:link,
-.ghx-issue-fields .ghx-key a:visited {
-  color: white;
-}
+    .ghx-issue-compact .ghx-grabber {
+        width: 6px;
+    }
 
-.ghx-column .ghx-issue.ghx-has-avatar .ghx-issue-fields,
-.ghx-column .ghx-issue.ghx-has-corner .ghx-issue-fields {
-    padding-right: 0;
-}
+    /* Enhanced Card Styling */
+    .ghx-work .ghx-issue {
+        padding: 0;
+    }
+    .ghx-issue .ghx-issue-fields .ghx-key {
+        background-color: #444;
+        display: block;
+        padding: .25em 1em .25em 55px;
+        border-radius: .25em;
+    }
+    .ghx-issue-fields .ghx-key a:link,
+    .ghx-issue-fields .ghx-key a:visited {
+        color: white;
+    }
 
-.ghx-issue .ghx-issue-fields .ghx-summary {
-  margin-right: 0;
-  padding: .5em .5em .5em 10px;
-  background-color: #eee;
-  /*padding-right: 50px;*/
-  font-weight: bold;
-}
+    .ghx-column .ghx-issue.ghx-has-avatar .ghx-issue-fields,
+    .ghx-column .ghx-issue.ghx-has-corner .ghx-issue-fields {
+        padding-right: 0;
+    }
 
-.ghx-band-1 .ghx-issue-fields .ghx-summary .ghx-inner {
-    line-height: 1.3em;
-    max-height: 3.9em;
-}
+    .ghx-issue .ghx-issue-fields .ghx-summary {
+        margin-right: 0;
+        padding: .5em .5em .5em 10px;
+        background-color: #eee;
+        /*padding-right: 50px;*/
+        font-weight: bold;
+    }
 
-.ghx-issue.ghx-has-avatar .ghx-avatar {
-    border: 2px solid #444;
-    border-radius: 0;
-    background-color: #fff;
-}
+    .ghx-band-1 .ghx-issue-fields .ghx-summary .ghx-inner {
+        line-height: 1.3em;
+        max-height: 3.9em;
+    }
 
-.ghx-band-1 .ghx-issue .ghx-avatar {
-	position: absolute;
-	top: 0;
-    right: 0;
-}
+    .ghx-issue.ghx-has-avatar .ghx-avatar {
+        border: 2px solid #444;
+        border-radius: 3px;
+        background-color: #fff;
+    }
 
-.ghx-band-1 .ghx-issue .ghx-avatar-img {
-	width: 22px;
-	height: 22px;
-	border-radius: 0;
-}
+    .ghx-issue .ghx-avatar,
+    .ghx-band-1 .ghx-issue .ghx-avatar {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 
-.ghx-column .ghx-issue .ghx-highlighted-fields {
-    margin-top: 0;
-}
+    .ghx-avatar-img,
+    .ghx-band-1 .ghx-issue .ghx-avatar-img {
+        min-width: 0;
+        width: 23px;
+        height: 23px;
+        border-radius: 0;
+        transition: all .2s ease-out;
+    }
 
-.ghx-issue .ghx-highlighted-fields .ghx-highlighted-field .aui-label {
-    padding: .25em 1em;
-    border-radius: 0 0 .5em 0;
-    font-size: 12px;
-}
+    .ghx-avatar-img:hover,
+    .ghx-band-1 .ghx-issue .ghx-avatar-img:hover {
+        height: 64px;
+        width: 64px;
+        box-shadow: 2px 2px 2px rgba(0,0,0,.75);
+    }
 
-.ghx-issue .ghx-extra-fields {
-  padding: .5em .5em .5em 10px;
-  font-size: 0.85em;
-}
+    .ghx-avatar-img.ghx-auto-avatar,
+    .ghx-band-1 .ghx-issue .ghx-avatar-img.ghx-auto-avatar {
+        font-size: 17px;
+        line-height: inherit;
+        transition: all .2s ease-out;
+    }
 
-.ghx-issue .ghx-extra-fields .ghx-extra-field-row:not(:last-child) {
-    border-bottom: 1px solid #b4cad8;
-}
+    .ghx-avatar-img.ghx-auto-avatar:hover,
+    .ghx-band-1 .ghx-issue .ghx-avatar-img.ghx-auto-avatar:hover {
+        font-size: 42px;
+    }
 
-.ghx-issue .ghx-extra-fields .ghx-extra-field-row {
-    padding: .25em;
-}
+    .ghx-column .ghx-issue .ghx-highlighted-fields {
+        margin-top: 0;
+    }
 
-.ghx-issue .ghx-extra-fields .ghx-extra-field-content > * {
-    vertical-align: middle;
-}
+    .ghx-issue .ghx-highlighted-fields .ghx-highlighted-field .aui-label {
+        padding: .25em 1em;
+        border-radius: 0 0 .5em 0;
+        font-size: 12px;
+    }
 
-.ghx-issue .ghx-card-footer {
-    padding: 0 1em 1em 1em;
-}
+    .ghx-issue .ghx-extra-fields {
+        padding: .5em .5em .5em 10px;
+        font-size: 0.85em;
+    }
 
-.ghx-issue .ghx-card-footer .ghx-type {
-  position: absolute;
-    top: 5px;
-    left: 33px;
-}
+    .ghx-issue .ghx-extra-fields .ghx-extra-field-row:not(:last-child) {
+        border-bottom: 1px solid #b4cad8;
+    }
 
-.ghx-issue .ghx-card-footer .ghx-flags {
-  position: absolute;
-    top: 5px;
-    left: 12px;
-}
+    .ghx-issue .ghx-extra-fields .ghx-extra-field-row {
+        padding: .25em;
+    }
 
-.ghx-issue .ghx-card-footer div:not(:last-child) {
-	margin-right: 0;
-}
+    .ghx-issue .ghx-extra-fields .ghx-extra-field-content > * {
+        vertical-align: middle;
+    }
 
-.ghx-issue .ghx-grabber {
-  width: 5px;
-}
+    .ghx-issue .ghx-card-footer {
+        padding: 0 1em 1em 1em;
+    }
 
-/* Story Points bubble. */
-.ghx-issue .ghx-corner {
-	position: absolute;
-    left: 0;
-    bottom: 0;
-}
+    .ghx-issue .ghx-card-footer .ghx-type {
+        position: absolute;
+        top: 5px;
+        left: 33px;
+    }
 
-.ghx-gh aui-badge, .ghx-gh .aui-badge {
-	border-radius: 0 0.5em 0 0;
+    .ghx-issue .ghx-card-footer .ghx-flags {
+        position: absolute;
+        top: 5px;
+        left: 12px;
+    }
+
+    .ghx-issue .ghx-card-footer div:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .ghx-issue .ghx-grabber {
+        width: 5px;
+    }
+
+    /* Story Points bubble. */
+    .ghx-issue .ghx-corner {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .ghx-gh aui-badge, .ghx-gh .aui-badge {
+        border-radius: 0 0.5em 0 0;
+    }
 }
