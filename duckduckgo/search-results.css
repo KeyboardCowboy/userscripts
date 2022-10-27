@@ -1,0 +1,5 @@
+/* Highlight ads in search results */
+#ads .nrn-react-div {
+    background: #ffeeee;
+    border-radius: 0.5em;
+}
